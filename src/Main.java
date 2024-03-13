@@ -39,6 +39,11 @@ public class Main {
         System.out.println(order2);
         System.out.println("Ordini totali"+orders);
        orders.stream().forEach(o -> o.getProducts().forEach(product -> System.out.println(product.sameCategoryB(o.getProducts()))));
-//        orders.stream().filter(o -> o.getDate().isAfter(LocalDate.of(2021, 2, 1
+
+        for(Order o:orders) {
+            if (o.getOrderDate().isAfter(LocalDate.of(2021, 2, 1))&&o.getOrderDate().isBefore(LocalDate.of(2021, 4, 1))) {
+                System.out.println(o);
+            }
+        }
     }
 }

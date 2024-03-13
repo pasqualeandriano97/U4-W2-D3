@@ -31,6 +31,10 @@ public List<List<Product>> getBabyOrder (List<List<Product>> babyOrders) {
 
 }
 
+    public LocalDate getOrderDate() {
+        return orderDate;
+    }
+
     @Override
     public String toString() {
         return "Order{" +
