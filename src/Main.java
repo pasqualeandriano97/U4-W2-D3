@@ -31,7 +31,9 @@ public class Main {
         orders.add(order);
         orders.add(order1);
         orders.add(order2);
-
+        System.out.println("Ordini totali"+orders);
+        List<Order> filteredOrders=orders.stream().filter(o -> o.getProducts().stream().anyMatch(p -> p.getCategory().equals("Baby"))).toList();
+        System.out.println("Ordini con prodotti di categoria Baby: "+filteredOrders);
       filteredProducts.stream().forEach(p -> p.setPrice(p.getPrice()*0.9));
       System.out.println("Prodotti con categoria Boys e sconto del 10% : "+filteredProducts);
 
