@@ -35,6 +35,10 @@ public List<List<Product>> getBabyOrder (List<List<Product>> babyOrders) {
         return orderDate;
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
     @Override
     public String toString() {
         return "Order{" +

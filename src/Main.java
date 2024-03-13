@@ -39,7 +39,7 @@ public class Main {
        orders.stream().forEach(o -> o.getProducts().forEach(product -> System.out.println(product.sameCategoryB(o.getProducts()))));
 
         for(Order o:orders) {
-            if (o.getOrderDate().isAfter(LocalDate.of(2021, 2, 1))&&o.getOrderDate().isBefore(LocalDate.of(2021, 4, 1))) {
+            if (o.getCustomer().getTier().equals(2)&&o.getOrderDate().isAfter(LocalDate.of(2021, 2, 1))&&o.getOrderDate().isBefore(LocalDate.of(2021, 4, 1))) {
                 System.out.println("Ordine effettuato nelle date limite: "+o);
             }
         }
