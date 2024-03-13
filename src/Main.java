@@ -40,7 +40,10 @@ public class Main {
 
         for(Order o:orders) {
             if (o.getCustomer().getTier().equals(2)&&o.getOrderDate().isAfter(LocalDate.of(2021, 2, 1))&&o.getOrderDate().isBefore(LocalDate.of(2021, 4, 1))) {
-                System.out.println("Ordine effettuato nelle date limite: "+o);
+                System.out.println("Prodotti ordinati da client1 con livello 2 e date comprese tra 01/02/2021 e 01/04/2021: ");
+                for (Product product : o.getProducts()) {
+                    System.out.println(product);
+                }
             }
         }
     }
